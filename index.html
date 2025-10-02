@@ -17,6 +17,16 @@
       #mobile-menu {
         transition: all 0.3s ease-in-out;
       }
+      /* Fade-in animation on scroll */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body class="bg-slate-50 text-slate-700">
@@ -34,6 +44,7 @@
           </a>
           <nav class="hidden md:flex items-center space-x-8 text-slate-700 font-medium">
             <a href="#benefits" class="hover:text-orange-500 transition-colors">Kenapa Kami?</a>
+            <a href="#tentang-kami" class="hover:text-orange-500 transition-colors">Tentang Kami</a>
             <a href="#services" class="hover:text-orange-500 transition-colors">Perkhidmatan</a>
             <a href="#process" class="hover:text-orange-500 transition-colors">Proses Kami</a>
             <a href="#pricing" class="hover:text-orange-500 transition-colors">Pakej & Harga</a>
@@ -54,6 +65,7 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4">
             <nav class="flex flex-col items-center space-y-4 text-slate-700 font-medium">
               <a href="#benefits" class="hover:text-orange-500 transition-colors">Kenapa Kami?</a>
+              <a href="#tentang-kami" class="hover:text-orange-500 transition-colors">Tentang Kami</a>
               <a href="#services" class="hover:text-orange-500 transition-colors">Perkhidmatan</a>
               <a href="#process" class="hover:text-orange-500 transition-colors">Proses Kami</a>
               <a href="#pricing" class="hover:text-orange-500 transition-colors">Pakej & Harga</a>
@@ -88,7 +100,7 @@
       </section>
 
       <!-- Why Us Section -->
-      <section id="benefits" class="py-20 md:py-28 bg-slate-50">
+      <section id="benefits" class="py-20 md:py-28 bg-slate-50 fade-in-section">
         <div class="container mx-auto px-6">
           <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Kenapa Jenama Online Penting Untuk Kontraktor?</h2>
@@ -125,8 +137,38 @@
         </div>
       </section>
 
+      <!-- About Us Section -->
+      <section id="tentang-kami" class="py-20 md:py-28 bg-white fade-in-section">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Kami Faham Dunia Kontraktor</h2>
+              <p class="mt-4 text-lg text-slate-600">
+                Kami bukan sekadar agensi digital biasa. Kami adalah gabungan pencipta kandungan berpengalaman dan juga kontraktor sebenar. Kami hidup dalam industri ini, sama seperti anda.
+              </p>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                Kami faham selok-belok pasaran pembinaan di Malaysia, cabaran mendapatkan projek, dan apa yang pelanggan mahu lihat untuk membina kepercayaan. Kelebihan unik ini membolehkan kami mencipta kandungan yang benar-benar 'kena' dengan audiens sasaran anda, membina jenama yang tulen dan meyakinkan.
+              </p>
+            </div>
+            <div class="flex justify-center">
+              <div class="bg-slate-50 p-8 rounded-xl shadow-lg relative max-w-sm">
+                  <div class="flex items-center justify-center h-20 w-20 rounded-full bg-orange-100 mb-6 mx-auto absolute -top-10 left-1/2 -translate-x-1/2 border-4 border-white">
+                     <svg class="w-10 h-10 text-orange-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-blue-900 mb-3 pt-10 text-center">Gabungan Unik</h3>
+                  <ul class="space-y-3 text-slate-600">
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Pakar Pemasaran Digital</span></li>
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Kontraktor Berpengalaman</span></li>
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Strategi yang Terbukti Berkesan</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Features Section -->
-      <section id="services" class="py-20 md:py-28 bg-white">
+      <section id="services" class="py-20 md:py-28 bg-slate-50 fade-in-section">
         <div class="container mx-auto px-6">
           <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Perkhidmatan Lengkap Untuk Jenama Anda</h2>
@@ -136,7 +178,7 @@
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Feature Card 1 -->
-            <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
                 <svg class="w-8 h-8 text-blue-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </div>
@@ -144,7 +186,7 @@
               <p class="text-slate-600 leading-relaxed">Kami bina dan optimasi halaman Facebook anda untuk kelihatan profesional, menarik, dan dipercayai oleh bakal pelanggan.</p>
             </div>
             <!-- Feature Card 2 -->
-            <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
                 <svg class="w-8 h-8 text-blue-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
               </div>
@@ -152,7 +194,7 @@
               <p class="text-slate-600 leading-relaxed">Kami kaji bisnes, pesaing, dan pelanggan ideal anda untuk merangka strategi kandungan yang paling berkesan.</p>
             </div>
             <!-- Feature Card 3 -->
-            <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
                 <svg class="w-8 h-8 text-blue-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12"cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
               </div>
@@ -160,7 +202,7 @@
               <p class="text-slate-600 leading-relaxed">Pos yang direka khas untuk menarik audiens sasaran, menonjolkan kepakaran anda, dan membina keyakinan pelanggan.</p>
             </div>
             <!-- Feature Card 4 -->
-            <div class="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
                 <svg class="w-8 h-8 text-blue-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               </div>
@@ -172,7 +214,7 @@
       </section>
 
       <!-- Process Section -->
-      <section id="process" class="py-20 md:py-28 bg-slate-50">
+      <section id="process" class="py-20 md:py-28 bg-white fade-in-section">
         <div class="container mx-auto px-6">
           <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Proses Kami yang Mudah & Telus</h2>
@@ -228,104 +270,119 @@
       </section>
 
       <!-- Pricing Section -->
-      <section id="pricing" class="py-20 md:py-28 bg-white">
+      <section id="pricing" class="py-20 md:py-28 bg-slate-50 fade-in-section">
         <div class="container mx-auto px-6">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Pakej & Harga</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Pakej Fleksibel Untuk Setiap Keperluan</h2>
             <p class="mt-4 text-lg max-w-3xl mx-auto text-slate-600">
-              Pilih pelan yang paling sesuai untuk membantu bisnes kontraktor anda berkembang maju secara online. Harga promosi terhad!
+              Kami menawarkan pakej pengurusan Facebook dan juga perkhidmatan pembinaan laman web untuk memenuhi matlamat bisnes anda. Harga promosi terhad!
             </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto items-start">
-            
-            <!-- Package 1: Kandungan Konsisten -->
-            <div class="bg-slate-50 border-2 border-transparent p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-              <h3 class="text-2xl font-bold text-blue-900">Kandungan Konsisten</h3>
-              <p class="mt-2 text-slate-600 text-sm">Sesuai untuk kontraktor yang ingin konsisten di media sosial dan membina kredibiliti jenama dengan lebih cepat.</p>
-              <div class="my-8 text-center">
-                <span class="text-3xl font-bold text-slate-400 line-through">RM999</span>
-                <span class="text-5xl font-extrabold text-orange-500">RM599</span>
-                <span class="text-slate-500 block">sekali bayar</span>
+
+          <!-- Facebook Packages -->
+          <div class="mb-20">
+            <h3 class="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-12">Pakej Pengurusan Facebook</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
+              
+              <!-- Package 1: Asas Jenama Digital -->
+              <div class="bg-white border-2 border-transparent p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                <h3 class="text-2xl font-bold text-blue-900">Asas Jenama Digital</h3>
+                <p class="mt-2 text-slate-600 text-sm">Sesuai untuk kontraktor yang baru bermula dan mahu memiliki kehadiran Facebook yang profesional dengan segera.</p>
+                <div class="my-8 text-center">
+                  <span class="text-3xl font-bold text-slate-400 line-through">RM799</span>
+                  <span class="text-5xl font-extrabold text-orange-500">RM499</span>
+                  <span class="text-slate-500 block">sekali bayar</span>
+                </div>
+                <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Binaan <b>Halaman Facebook</b> baharu yang dioptimasi.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Logo & Banner ringkas.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>4 Kandungan</b> asas.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Pengurusan posting</b> untuk permulaan.</span></li>
+                </ul>
+                <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Asas%20Jenama%20Digital%20(RM499)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-white border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-lg hover:bg-blue-800 hover:text-white transition-colors">
+                  Pilih Pakej
+                </a>
               </div>
-              <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>15 Kandungan</b> (teks & imej) berstrategi.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Menarik <b>prospek berkualiti</b> & tonjolkan kepakaran.</span></li>
+
+              <!-- Package 2: Kandungan Konsisten -->
+              <div class="bg-white border-2 border-transparent p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                <h3 class="text-2xl font-bold text-blue-900">Kandungan Konsisten</h3>
+                <p class="mt-2 text-slate-600 text-sm">Sesuai untuk kontraktor yang ingin konsisten di media sosial dan membina kredibiliti jenama dengan lebih cepat.</p>
+                <div class="my-8 text-center">
+                  <span class="text-3xl font-bold text-slate-400 line-through">RM999</span>
+                  <span class="text-5xl font-extrabold text-orange-500">RM599</span>
+                  <span class="text-slate-500 block">sekali bayar</span>
+                </div>
+                <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>15 Kandungan</b> (teks & imej) berstrategi.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Menarik <b>prospek berkualiti</b> & tonjolkan kepakaran.</span></li>
                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Hantaran melalui <b>Google Docs</b>.</span></li>
-              </ul>
-              <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Kandungan%20Konsisten%20(RM599)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-white border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-lg hover:bg-blue-800 hover:text-white transition-colors">
-                Pilih Pakej
-              </a>
-            </div>
-
-            <!-- Package 2: Business Landing Page -->
-            <div class="bg-slate-50 border-2 border-transparent p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-              <h3 class="text-2xl font-bold text-blue-900">Business Landing Page</h3>
-              <p class="mt-2 text-slate-600 text-sm">Tingkatkan kehadiran digital anda dengan laman web sepantas kilat untuk menarik lebih ramai pelanggan.</p>
-              <div class="my-8 text-center">
-                <span class="text-3xl font-bold text-slate-400 line-through">RM1200</span>
-                <span class="text-5xl font-extrabold text-orange-500">RM599</span>
-                <span class="text-slate-500 block">sekali bayar</span>
+                </ul>
+                <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Kandungan%20Konsisten%20(RM599)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-white border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-lg hover:bg-blue-800 hover:text-white transition-colors">
+                  Pilih Pakej
+                </a>
               </div>
-              <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Laman web <b>satu muka</b> yang profesional.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Sepantas kilat</b> untuk pengalaman pengguna terbaik.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Rekaan mesra mobil</b> & tablet.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>OptimasI SEO asas untuk <b>mudah dijumpai di Google</b>.</span></li>
-              </ul>
-              <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Business%20Landing%20Page%20(RM599)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-white border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-lg hover:bg-blue-800 hover:text-white transition-colors">
-                Pilih Pakej
-              </a>
-            </div>
 
-            <!-- Package 3: Asas Jenama Digital -->
-            <div class="bg-slate-50 border-2 border-transparent p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-              <h3 class="text-2xl font-bold text-blue-900">Asas Jenama Digital</h3>
-              <p class="mt-2 text-slate-600 text-sm">Sesuai untuk kontraktor yang baru bermula dan mahu memiliki kehadiran Facebook yang profesional dengan segera.</p>
-              <div class="my-8 text-center">
-                <span class="text-3xl font-bold text-slate-400 line-through">RM799</span>
-                <span class="text-5xl font-extrabold text-orange-500">RM499</span>
-                <span class="text-slate-500 block">sekali bayar</span>
+              <!-- Package 3: Lonjakan Jenama Pro (Highlighted) -->
+              <div class="bg-blue-900 text-white border-2 border-orange-500 p-8 rounded-2xl shadow-xl transition-all duration-300 flex flex-col h-full relative lg:scale-105">
+                 <div class="absolute top-0 right-8 -mt-4">
+                   <span class="bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">Pilihan Terbaik</span>
+                 </div>
+                <h3 class="text-2xl font-bold text-white">Lonjakan Jenama Pro</h3>
+                <p class="mt-2 text-blue-200 text-sm">Pilihan terbaik untuk kontraktor yang serius ingin melonjakkan jenama mereka dan menarik pelanggan berkualiti dengan pantas.</p>
+                <div class="my-8 text-center">
+                  <span class="text-3xl font-bold text-blue-300 line-through">RM1299</span>
+                  <span class="text-5xl font-extrabold text-white">RM799</span>
+                  <span class="text-blue-200 block">sekali bayar</span>
+                </div>
+                <ul class="space-y-4 text-blue-100 mb-8 flex-grow">
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Binaan <b>Halaman Facebook</b> baharu.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Logo & Banner <b>profesional</b>.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>15 Kandungan</b> (teks & imej) strategik.</span></li>
+                  <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Pengurusan posting</b> konsisten & berautoriti.</span></li>
+                </ul>
+                <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Lonjakan%20Jenama%20Pro%20(RM799)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105">
+                  Pilih Pakej
+                </a>
               </div>
-              <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Binaan <b>Halaman Facebook</b> baharu yang dioptimasi.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Logo & Banner ringkas.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>4 Kandungan</b> asas.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Pengurusan posting</b> untuk permulaan.</span></li>
-              </ul>
-              <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Asas%20Jenama%20Digital%20(RM499)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-white border-2 border-blue-800 text-blue-800 font-bold py-3 px-6 rounded-lg hover:bg-blue-800 hover:text-white transition-colors">
-                Pilih Pakej
-              </a>
             </div>
+          </div>
 
-            <!-- Package 4: Lonjakan Jenama Pro (Highlighted) -->
-            <div class="bg-blue-900 text-white border-2 border-orange-500 p-8 rounded-2xl shadow-xl transition-all duration-300 flex flex-col h-full relative xl:scale-105">
-               <div class="absolute top-0 right-8 -mt-4">
-                 <span class="bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg">Pilihan Terbaik</span>
-               </div>
-              <h3 class="text-2xl font-bold text-white">Lonjakan Jenama Pro</h3>
-              <p class="mt-2 text-blue-200 text-sm">Pilihan terbaik untuk kontraktor yang serius ingin melonjakkan jenama mereka dan menarik pelanggan berkualiti dengan pantas.</p>
-              <div class="my-8 text-center">
-                <span class="text-3xl font-bold text-blue-300 line-through">RM1299</span>
-                <span class="text-5xl font-extrabold text-white">RM799</span>
-                <span class="text-blue-200 block">sekali bayar</span>
+          <!-- Landing Page Package -->
+          <div>
+            <h3 class="text-2xl md:text-3xl font-bold text-blue-900 text-center mb-12">Perkhidmatan Laman Web (Landing Page)</h3>
+            <div class="max-w-3xl mx-auto">
+              <div class="bg-white border-2 border-orange-500 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row md:items-center gap-8">
+                  <div class="md:w-2/3">
+                    <span class="bg-orange-500 text-white text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">Tingkat Kredibiliti</span>
+                    <h4 class="text-2xl font-bold text-blue-900 mt-4">Business Landing Page</h4>
+                    <p class="mt-2 text-slate-600">Tingkatkan kehadiran digital anda dengan laman web sepantas kilat untuk menarik lebih ramai pelanggan.</p>
+                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Laman web <b>satu muka</b> yang profesional.</span></li>
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Sepantas kilat</b> untuk pengalaman pengguna terbaik.</span></li>
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Rekaan mesra mobil</b> & tablet.</span></li>
+                      <li class="flex items-start"><svg class="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>OptimasI SEO asas untuk <b>mudah dijumpai di Google</b>.</span></li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/3 text-center flex flex-col justify-center items-center">
+                      <div class="my-4">
+                        <span class="text-2xl font-bold text-slate-400 line-through">RM1200</span>
+                        <span class="text-4xl font-extrabold text-orange-500 block">RM599</span>
+                        <span class="text-slate-500">sekali bayar</span>
+                      </div>
+                      <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Business%20Landing%20Page%20(RM599)." target="_blank" rel="noopener noreferrer" class="w-full text-center bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105">
+                        Tempah Sekarang
+                      </a>
+                  </div>
               </div>
-              <ul class="space-y-4 text-blue-100 mb-8 flex-grow">
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Binaan <b>Halaman Facebook</b> baharu.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span>Logo & Banner <b>profesional</b>.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>15 Kandungan</b> (teks & imej) strategik.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-orange-400 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg><span><b>Pengurusan posting</b> konsisten & berautoriti.</span></li>
-              </ul>
-              <a href="https://wa.me/60182233427?text=Salam%2C%20saya%20berminat%20dengan%20Pakej%20Lonjakan%20Jenama%20Pro%20(RM799)." target="_blank" rel="noopener noreferrer" class="mt-auto w-full text-center bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105">
-                Pilih Pakej
-              </a>
             </div>
-
           </div>
         </div>
       </section>
 
+
       <!-- CTA Section -->
-      <section id="contact" class="bg-blue-900">
+      <section id="contact" class="bg-blue-900 fade-in-section">
         <div class="container mx-auto px-6 py-20 text-center">
           <h2 class="text-3xl md:text-4xl font-extrabold text-white">
             Sedia Untuk Kembangkan Bisnes Kontraktor Anda?
@@ -396,6 +453,23 @@
       menuToggle.addEventListener('click', () => {
         const isHidden = mobileMenu.classList.toggle('hidden');
         menuIconPath.setAttribute('d', isHidden ? iconOpen : iconClose);
+      });
+
+      // Scroll Animation on reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -50px 0px' // Trigger animation slightly before the element is fully in view
+      });
+
+      const sectionsToAnimate = document.querySelectorAll('.fade-in-section');
+      sectionsToAnimate.forEach((section) => {
+        observer.observe(section);
       });
     </script>
   </body>
